@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "",
+  "buildCommand": "npm run check",
+  "outputDirectory": "public",
+  "rewrites": [
+    {
+      "source": "/series/lincoln-center-presents/v/choose-what-you-pay",
+      "destination": "/index.html"
+    }
+  ]
+}

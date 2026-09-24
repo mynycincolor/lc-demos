@@ -1,0 +1,22 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * obviously-variable:
+ *   - http://typekit.com/eulas/0000000000000000774b907c
+ *
+ * © 2009-2026 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2025-03-27 16:28:05 UTC"}*/
+
+@import url(data:text/css,);
+
+@font-face {
+font-family:"obviously-variable";
+src:url(/assets/4183cd427f963d28) format("woff2"),url(/assets/9cae84bec90d8f01) format("woff"),url(/assets/c9fddec67f2e45c9) format("opentype");
+font-display:auto;font-style:normal;font-weight:200 900;font-stretch:normal;
+}
+
+.tk-obviously-variable { font-family: "obviously-variable",sans-serif; }

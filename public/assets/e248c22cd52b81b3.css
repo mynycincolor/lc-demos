@@ -1,0 +1,57 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * obviously:
+ *   - http://typekit.com/eulas/00000000000000007735c9da
+ *   - http://typekit.com/eulas/00000000000000007735c9e3
+ *   - http://typekit.com/eulas/00000000000000007735ca02
+ *   - http://typekit.com/eulas/00000000000000007735ca07
+ *   - http://typekit.com/eulas/00000000000000007735ca0b
+ *   - http://typekit.com/eulas/00000000000000007735ca0e
+ *
+ * © 2009-2026 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2024-08-07 21:12:32 UTC"}*/
+
+@import url(data:text/css,);
+
+@font-face {
+font-family:"obviously";
+src:url(/assets/2367a2565297d49a) format("woff2"),url(/assets/6c8b30fe1ee8f5bd) format("woff"),url(/assets/9721b543f70d71fe) format("opentype");
+font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously";
+src:url(/assets/8353334ec7c939d4) format("woff2"),url(/assets/8e655e31484bbfa6) format("woff"),url(/assets/9730202f2fd6c815) format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously";
+src:url(/assets/cad47dcaf45ed642) format("woff2"),url(/assets/bb9fafafbf9df3ec) format("woff"),url(/assets/5d19838cc57d59c9) format("opentype");
+font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously";
+src:url(/assets/44afde65486b341c) format("woff2"),url(/assets/35d94eca2dee4d00) format("woff"),url(/assets/5ddc9dd779f02e90) format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously";
+src:url(/assets/70d75b1dbbb4f578) format("woff2"),url(/assets/5c3e81d9530f6357) format("woff"),url(/assets/6ee1a1a132b83e2e) format("opentype");
+font-display:auto;font-style:normal;font-weight:800;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously";
+src:url(/assets/9bc212d4e6dd9b9c) format("woff2"),url(/assets/e88496931d97b3ba) format("woff"),url(/assets/9a20d72852ab8845) format("opentype");
+font-display:auto;font-style:italic;font-weight:800;font-stretch:normal;
+}
+
+.tk-obviously { font-family: "obviously",sans-serif; }
