@@ -28,3 +28,11 @@ Import `mynycincolor/member-presale` into Vercel. The checked-in `vercel.json` s
 The show-page demo is available at `/heidi-latsky-dance.html`, with a hosted alias at `/series/lincoln-center-presents/heidi-latsky-dance-571`. Heidi's title and image on the listing link to this demo. Join and Log in open the existing LC destinations; account authentication is not simulated. The original presale-date and membership-pitch paragraphs are replaced by the new callout. Embedded video and maps still use their original external services. Third-party dynamic supporter widgets are not loaded.
 
 Original Lincoln Center content and assets are retained solely for this requested prototype.
+
+## Shareable demo menu
+
+`/demos.html` links to all three signed-out presale previews. The existing root
+listing URL stays unchanged. Each preview includes a Back to demos link.
+`/lincoln-center-presents.html` recreates only the series header, video and
+introduction, followed by the membership callout. Its Vimeo embed and poster
+are external media; account and checkout actions still link to the live LC site.

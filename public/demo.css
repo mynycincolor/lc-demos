@@ -77,3 +77,50 @@
  #member-access-dialog .member-presale-actions{gap:10px;margin-top:20px}
  #member-access-dialog .member-action{font-size:15px!important;padding:12px 8px;white-space:nowrap}
 }
+/* Reviewer navigation and the three-entry demo menu. */
+.demo-review-nav{display:flex;justify-content:space-between;gap:16px;padding:10px 24px;background:#f5f4f2;color:#37312d;font:400 14px/1.4 Karla,sans-serif}
+.demo-review-nav a{color:#37312d!important;text-decoration:underline!important;font-weight:700}
+.demo-hub{margin:0;background:#faf9f7;color:#37312d;font:400 20px/1.5 Karla,sans-serif}
+.demo-hub main{max-width:1120px;margin:auto;padding:72px 32px}
+.hub-eyebrow{font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 24px;color:#1000c9}
+.demo-hub h1{font:700 clamp(36px,6vw,64px)/1.1 obviously,sans-serif;margin:0 0 24px;letter-spacing:-.03em}
+.hub-intro{max-width:760px;margin-bottom:40px}
+.hub-pages{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.hub-pages>a{display:flex;flex-direction:column;padding:28px;background:white;border:1px solid #d7d3cf;color:#37312d;text-decoration:none;transition:border-color .2s,box-shadow .2s}
+.hub-pages>a:hover{border-color:#f9432a;box-shadow:0 6px 24px #37312d12}
+.hub-number{color:#1000c9;font-size:14px;margin-bottom:24px}
+.hub-pages h2{font:700 22px/1.25 obviously,sans-serif;margin:0 0 16px}
+.hub-pages p{font-size:18px;margin:0 0 28px}
+.hub-link{font:700 15px/1.4 obviously,sans-serif;margin-top:auto}
+.hub-note{font-size:15px;max-width:850px;margin-top:32px;color:#625c57}
+/* Series landing preview: retain the original hero and introduction. */
+#series-venue-page .series-presale-callout{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:24px 30px!important;margin:24px 30px 40px;background:#f1f0ff;border-left:5px solid #1000c9;box-sizing:border-box}
+#series-venue-page .series-presale-callout h2{font:700 23px/1.25 obviously,sans-serif!important;color:#1000c9;margin:0 0 12px!important;padding:0!important;text-align:left}
+#series-venue-page .series-presale-callout p{font:400 20px/1.5 Karla,sans-serif;margin:0!important;padding:0!important;max-width:760px}
+.series-presale-callout .member-action{display:inline-flex;justify-content:center;align-items:center;min-height:48px;box-sizing:border-box;padding:12px 22px;border:2px solid #37312d;font:700 16px/1.25 obviously,sans-serif!important;text-decoration:none!important;white-space:nowrap;position:relative;isolation:isolate;overflow:hidden}
+.series-presale-callout .member-action-primary{background:#37312d!important;color:#fff!important}
+.series-presale-callout .member-action-secondary{background:transparent!important;color:#37312d!important}
+.series-presale-callout .member-action::before{content:'';position:absolute;inset:0;background:#f9432a;z-index:-1;transform:scaleX(0);transform-origin:left;transition:transform .3s ease-out}
+.series-presale-callout .member-action:hover::before{transform:scaleX(1)}
+.series-presale-callout .member-action:hover{color:white!important;border-color:#f9432a}
+.series-demo .lnd-art-video{position:relative;aspect-ratio:8/3;height:auto!important;overflow:hidden;background:#111}
+.series-demo .lnd-art-title{pointer-events:none}
+.series-demo .demo-preview-end{text-align:center;font:400 15px/1.5 Karla,sans-serif;padding:16px 24px 32px;color:#625c57}
+.demo-preview-end a{color:#37312d;text-decoration:underline}
+@media(max-width:900px){.hub-pages{grid-template-columns:1fr}#series-venue-page .series-presale-callout{align-items:flex-start;flex-direction:column;gap:20px}}
+@media(max-width:600px){
+ .demo-review-nav{padding:10px 16px;font-size:12px}.demo-review-nav span{display:none}
+ .demo-hub main{padding:40px 20px}.hub-pages>a{padding:24px}.hub-number{margin-bottom:16px}
+ #series-venue-page .series-presale-callout{padding:22px 18px!important;margin:20px 16px 28px}
+ #series-venue-page .series-presale-callout h2{font-size:21px!important}
+ #series-venue-page .series-presale-callout p{font-size:18px;line-height:1.4}
+ .series-presale-callout .member-presale-actions{gap:10px}
+ .series-presale-callout .member-action{font-size:15px!important;padding:12px 10px}
+ .series-demo .lnd-art-video{aspect-ratio:1}
+}
+#series-venue-page #landing-page-container .series-presale-callout a.member-action-primary{color:#fff!important}
+#series-venue-page #landing-page-container .series-presale-callout a.member-action-secondary{color:#37312d!important}
+#series-venue-page #landing-page-container .series-presale-callout a.member-action:hover{color:#fff!important}
+
+#series-venue-page.series-demo .lnd-art-video{background:#111 url("https://i.vimeocdn.com/video/2184399668-2df0cadb2e9a6ce3aa419ed49a6967b3ad8a50087101fbf8103be5a45c560f8f-d_295x166?region=us") center/cover no-repeat}
+.hub-pages p{font-weight:400}
