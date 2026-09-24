@@ -136,3 +136,7 @@
  .series-presale-callout .member-presale-actions{width:100%;max-width:340px}
  .series-presale-callout .member-action{min-width:0}
 }
+@media(max-width:600px){
+ #series-venue-page.series-demo #landing-page-container .lnd-events-heading h2,
+ #series-venue-page.series-demo #landing-page-container .lnd-events-upcoming-heading h2{font-size:23px!important;line-height:1.25!important;padding:14px 16px!important;margin:0!important}
+}
