@@ -124,3 +124,4 @@
 
 #series-venue-page.series-demo .lnd-art-video{background:#111 url("https://i.vimeocdn.com/video/2184399668-2df0cadb2e9a6ce3aa419ed49a6967b3ad8a50087101fbf8103be5a45c560f8f-d_295x166?region=us") center/cover no-repeat}
 .hub-pages p{font-weight:400}
+.series-video-toggle{position:absolute;top:12px;left:12px;z-index:7;border:0;padding:12px 16px;background:#ffffffe6;color:#37312d;font:700 14px/1.4 Karla,sans-serif;cursor:pointer;min-height:44px}

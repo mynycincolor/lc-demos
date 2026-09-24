@@ -45,3 +45,11 @@ memberDialog?.addEventListener('click',event=>{
  const rect=memberDialog.getBoundingClientRect();
  if(event.target===memberDialog&&(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom))memberDialog.close();
 });
+const videoToggle=document.querySelector('.series-video-toggle');
+videoToggle?.addEventListener('click',()=>{
+ const paused=videoToggle.getAttribute('aria-pressed')!=='true';
+ document.querySelectorAll('.lnd-art-video iframe').forEach(frame=>frame.contentWindow.postMessage(JSON.stringify({method:paused?'pause':'play'}),'https://player.vimeo.com'));
+ videoToggle.setAttribute('aria-pressed',String(paused));
+ videoToggle.setAttribute('aria-label',`${paused?'Play':'Pause'} season preview video`);
+ videoToggle.textContent=paused?'Play video':'Pause video';
+});
