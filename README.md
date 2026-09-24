@@ -33,6 +33,7 @@ Original Lincoln Center content and assets are retained solely for this requeste
 
 `/demos.html` links to all three signed-out presale previews. The existing root
 listing URL stays unchanged. Each preview includes a Back to demos link.
-`/lincoln-center-presents.html` recreates only the series header, video and
-introduction, followed by the membership callout. Its Vimeo embed and poster
+`/lincoln-center-presents.html` recreates the series header, video and
+introduction, followed by the membership callout and a short excerpt of the
+original events and promotional content. Its Vimeo embed and poster
 are external media; account and checkout actions still link to the live LC site.
