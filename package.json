@@ -2,5 +2,5 @@
   "name": "lc-membership-presale-demo",
   "version": "0.1.0",
   "private": true,
-  "scripts": { "dev": "node server.mjs", "start": "node server.mjs", "check": "node --check server.mjs && node --check public/demo.js" }
+  "scripts": { "dev": "node server.mjs", "start": "node server.mjs", "check": "node --check server.mjs && node --check public/demo.js && node --check public/show.js" }
 }

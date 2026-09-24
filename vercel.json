@@ -6,6 +6,10 @@
   "outputDirectory": "public",
   "rewrites": [
     {
+      "source": "/series/lincoln-center-presents/heidi-latsky-dance-571",
+      "destination": "/heidi-latsky-dance.html"
+    },
+    {
       "source": "/series/lincoln-center-presents/v/choose-what-you-pay",
       "destination": "/index.html"
     }

@@ -11,6 +11,8 @@ An editable recreation of the public [Choose-What-You-Pay page](https://www.linc
 - `public/index.html`: the complete page, including the membership introduction, two sale groups, eight event cards (four per release group), and footer.
 - `public/demo.css`: focused overrides over LC's original presentation styles.
 - `public/demo.js`: local menus, ticketing accordion support, and preview-only email dialog.
+- `public/heidi-latsky-dance.html`: show-page presale demo, with the membership callout below the dates and informational pricing label.
+- `public/show.js`: local show-page calendar and share controls.
 - `public/assets/`: cached original images, styles, and fonts.
 - `data/event-inventory.json`: captured event inventory.
 - `data/asset-manifest.json`: public source URLs and asset cache provenance.
@@ -22,5 +24,7 @@ The baseline preserves current public copy and dates; these are a snapshot, not 
 ## Hosting
 
 Import `mynycincolor/member-presale` into Vercel. The checked-in `vercel.json` selects the Other framework preset, checks JavaScript, and publishes `public/`. No environment variables or running Node server are required for hosting. The original Choose-What-You-Pay path is mapped to the demo as well as the root URL. Additional pages can be added under `public/` in the same project.
+
+The show-page demo is available at `/heidi-latsky-dance.html`, with a hosted alias at `/series/lincoln-center-presents/heidi-latsky-dance-571`. Heidi's title and image on the listing link to this demo. Join and Log in open the existing LC destinations; account authentication is not simulated. The original presale-date and membership-pitch paragraphs are replaced by the new callout. Embedded video and maps still use their original external services. Third-party dynamic supporter widgets are not loaded.
 
 Original Lincoln Center content and assets are retained solely for this requested prototype.

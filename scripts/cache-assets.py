@@ -4,11 +4,12 @@ from pathlib import Path
 from urllib.parse import urljoin,urlparse
 from urllib.request import Request,urlopen
 from concurrent.futures import ThreadPoolExecutor
-import hashlib,json,re,gzip
+import hashlib,json,re,gzip,sys
 
 root=Path(__file__).resolve().parent.parent
 public=root/'public';assets=public/'assets'
-s=BeautifulSoup((public/'index.html').read_text(),'html.parser')
+page=public/(sys.argv[1] if len(sys.argv)>1 else 'index.html')
+s=BeautifulSoup(page.read_text(),'html.parser')
 previous=root/'data/asset-manifest.json'
 manifest=json.loads(previous.read_text())['assets'] if previous.exists() else {};failures=[]
 def fetch(url):
@@ -46,6 +47,6 @@ for tag in s.select('link[rel="stylesheet"],link[rel="icon"],img'):
 with ThreadPoolExecutor(max_workers=8) as pool:
     results=list(pool.map(fetch,dict.fromkeys(x[2] for x in targets)))
 for tag,attr,url in targets:tag[attr]=manifest.get(url.replace('http://','https://'),url)
-(public/'index.html').write_text(str(s))
+page.write_text(str(s).replace('viewbox=','viewBox='))
 (root/'data/asset-manifest.json').write_text(json.dumps({'assets':manifest,'failures':failures},indent=2))
 print(f'Cached {len(manifest)} assets; {len(failures)} failures.');print(json.dumps(failures))

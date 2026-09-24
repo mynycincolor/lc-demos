@@ -40,8 +40,8 @@ document.querySelectorAll('[data-member-access]').forEach(button=>{
   memberDialog.showModal();
  });
 });
-memberDialog.querySelector('.member-dialog-close').addEventListener('click',()=>memberDialog.close());
-memberDialog.addEventListener('click',event=>{
+memberDialog?.querySelector('.member-dialog-close').addEventListener('click',()=>memberDialog.close());
+memberDialog?.addEventListener('click',event=>{
  const rect=memberDialog.getBoundingClientRect();
  if(event.target===memberDialog&&(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom))memberDialog.close();
 });

@@ -20,6 +20,21 @@
 @media(max-width:700px){.ticket-faq{margin:28px 0;font-size:18px}.ticket-faq summary{padding:18px}.page-nav-wrapper.demo-open{display:block!important}.ticket-faq>div{padding:0 18px 18px}}
 
 /* Signed-out member presale, using the existing LC blue and typography. */
+#series-venue-page #show-wrapper .show-member-presale{background:#f1f0ff;border-left:4px solid #1000c9;padding:22px 18px!important;margin:18px 0 20px}
+#series-venue-page #show-wrapper .show-member-presale h2{font:700 23px/1.25 obviously,sans-serif!important;color:#1000c9;text-align:left!important;margin:0 0 12px;padding:0}
+#series-venue-page #show-wrapper .show-member-presale p{font:400 17px/1.4 Karla,sans-serif;margin:0;padding:0}
+#series-venue-page #show-wrapper .show-member-presale .member-presale-actions{gap:10px;margin:20px 0 16px;flex-wrap:wrap}
+#series-venue-page #show-wrapper .show-member-presale .member-action{display:inline-flex;justify-content:center;align-items:center;min-height:48px;padding:12px 14px;flex:1;border:2px solid #37312d;font:700 15px/1.25 obviously,sans-serif!important;text-decoration:none!important;position:relative;isolation:isolate;overflow:hidden}
+#series-venue-page #show-wrapper .show-member-presale .member-action-primary{background:#37312d!important;color:white!important}
+#series-venue-page #show-wrapper .show-member-presale .member-action-secondary{background:transparent!important;color:#37312d!important}
+#series-venue-page #show-wrapper .show-member-presale .member-action::before{content:'';position:absolute;inset:0;z-index:-1;background:#f9432a;transform:scaleX(0);transform-origin:left;transition:transform .3s ease-out}
+#series-venue-page #show-wrapper .show-member-presale .member-action:hover::before{transform:scaleX(1)}
+#series-venue-page #show-wrapper .show-member-presale .member-action:hover{color:white!important;border-color:#f9432a}
+#series-venue-page #show-wrapper .show-member-presale .show-general-sale{font-size:15px;font-weight:700;line-height:1.35}
+#show-wrapper [hidden]{display:none!important}
+#show-wrapper .widget-panel:not([hidden]){display:block!important}
+#show-wrapper .demo-tool-options{display:grid;gap:12px;padding:16px 0;font:16px/1.4 Karla,sans-serif}
+#show-wrapper .demo-tool-options a,#show-wrapper .demo-tool-options button{font:700 16px/1.4 Karla,sans-serif;color:#37312d;text-decoration:underline;background:none;border:0;text-align:left;cursor:pointer}
 #series-venue-page #cyp-wrapper .vs-cyp-description .member-presale-callout a.member-action-primary,
 #series-venue-page #cyp-wrapper .vs-cyp-description .member-presale-callout a.member-action-primary:visited{color:#fff!important}
 #series-venue-page #cyp-wrapper .vs-cyp-description .member-presale-callout a.member-action-secondary{color:#37312d!important}

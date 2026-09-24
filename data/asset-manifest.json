@@ -111,24 +111,19 @@
     "https://d21elokeqb3yai.cloudfront.net/assets/images/new_support.jpg": "/assets/beaf8d76ba48a2c8.jpg",
     "https://d21elokeqb3yai.cloudfront.net/assets/images/membership_SFTC_26.png": "/assets/66d2144ec25db826.png",
     "https://d21elokeqb3yai.cloudfront.net/assets/images/American-songbook-mobile-header.jpg": "/assets/24f1f8c804582ddb.jpg",
-    "https://d21elokeqb3yai.cloudfront.net/microsite-assets/css/styles-2.min.css?v=v15.0.0": "/assets/d05469bfd9db39f6.css"
+    "https://d21elokeqb3yai.cloudfront.net/microsite-assets/css/styles-2.min.css?v=v15.0.0": "/assets/d05469bfd9db39f6.css",
+    "https://www.lincolncenter.org/assets/images/access-closed-captioning.svg": "/assets/c9975b2ba0c45e05.svg",
+    "https://www.lincolncenter.org/assets/images/evcal-share-widget/calendar-icon2.svg": "/assets/d4524318a5bfb6e1.svg",
+    "https://www.lincolncenter.org/assets/images/evcal-share-widget/download-icon.svg": "/assets/e57a56174dc8e9dc.svg",
+    "https://www.lincolncenter.org/assets/images/Choose_what_you_pay_LC_Presents.svg": "/assets/b6b677feff6c8947.svg",
+    "https://www.lincolncenter.org/assets/images/headphone-symbol.svg": "/assets/627504026369f28a.svg",
+    "https://www.lincolncenter.org/assets/images/assistive_listening_devices.svg": "/assets/f62acba547c7528a.svg",
+    "https://www.lincolncenter.org/assets/images/universal_access_symbol.svg": "/assets/7a77f32b184606f3.svg",
+    "https://www.lincolncenter.org/assets/images/evcal-share-widget/share-icon2.svg": "/assets/58157f4ce5bddfc1.svg",
+    "https://images.lincolncenter.org/image/upload/km5c96faa6kiqtm6kgft": "/assets/d6c4aa43e83e4d9d",
+    "https://images.lincolncenter.org/image/upload/drzmfdnh3foqdt0mhi63": "/assets/0b2da83cdcfad975",
+    "https://images.lincolncenter.org/image/upload/bbsm4iyounhlzftghchv": "/assets/c0aa3c6a0fe71b0a",
+    "https://www.lincolncenter.org/assets/images/access-audio-description.svg": "/assets/6e4d5de043a5f64c.svg"
   },
-  "failures": [
-    {
-      "url": "https://fonts.cdnfonts.com/css/univers-next-pro",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://d21elokeqb3yai.cloudfront.net/microsite-assets/css/path-to-obviously.woff2",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://d21elokeqb3yai.cloudfront.net/microsite-assets/css/ /images.lincolncenter.org/image/upload/l0r0a97jf4cbmqae8faf",
-      "error": "URL can't contain control characters. '/microsite-assets/css/ /images.lincolncenter.org/image/upload/l0r0a97jf4cbmqae8faf' (found at least ' ')"
-    },
-    {
-      "url": "https://d21elokeqb3yai.cloudfront.net/microsite-assets/css/ /images.lincolncenter.org/image/upload/l0r0a97jf4cbmqae8faf",
-      "error": "URL can't contain control characters. '/microsite-assets/css/ /images.lincolncenter.org/image/upload/l0r0a97jf4cbmqae8faf' (found at least ' ')"
-    }
-  ]
+  "failures": []
 }
