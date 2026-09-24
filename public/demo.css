@@ -62,3 +62,10 @@
 .member-access-dialog .member-presale-actions{margin-top:20px}
 @media(max-width:900px){#cyp-wrapper .member-presale-callout{align-items:flex-start;flex-direction:column;gap:20px}}
 @media(max-width:600px){#cyp-wrapper .member-presale-callout{padding:22px 20px}#cyp-wrapper .member-presale-callout h2{font-size:23px}#cyp-wrapper .member-presale-callout p{font-size:18px}.member-presale-actions{width:100%}.member-presale-actions .member-action{flex:1;min-width:0!important}.member-access-dialog{padding:36px 24px 28px}}
+@media(max-width:600px){
+ #series-venue-page #cyp-wrapper .member-presale-callout{padding:22px 18px!important;box-sizing:border-box;gap:20px}
+ #series-venue-page #cyp-wrapper .member-presale-callout h2{padding:0!important;margin:0 0 12px!important;text-align:left!important;font-size:21px!important}
+ #series-venue-page #cyp-wrapper .member-presale-callout p{padding:0!important;margin:0!important;line-height:1.4}
+ #series-venue-page #cyp-wrapper .member-presale-callout .member-presale-actions{gap:10px;margin:0;align-self:stretch}
+ #series-venue-page #cyp-wrapper .member-presale-callout .member-action{padding:12px 10px;font-size:15px!important}
+}
