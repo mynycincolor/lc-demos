@@ -21,7 +21,8 @@
 
 /* Signed-out member presale, using the existing LC blue and typography. */
 #series-venue-page #show-wrapper .show-member-presale{background:#f1f0ff;border-left:4px solid #1000c9;padding:22px 18px!important;margin:18px 0 20px}
-#series-venue-page #show-wrapper .show-member-presale h2{font:700 23px/1.25 obviously,sans-serif!important;color:#1000c9;text-align:left!important;margin:0 0 12px;padding:0}
+#series-venue-page #show-wrapper .show-member-presale h2{font:700 23px/1.25 obviously,sans-serif!important;color:#1000c9;text-align:left!important;margin:0 0 12px;padding:0!important}
+@media(max-width:600px){#series-venue-page #show-wrapper .show-member-presale h2{font-size:21px!important}}
 #series-venue-page #show-wrapper .show-member-presale p{font:400 17px/1.4 Karla,sans-serif;margin:0;padding:0}
 #series-venue-page #show-wrapper .show-member-presale .member-presale-actions{gap:10px;margin:20px 0 16px;flex-wrap:wrap}
 #series-venue-page #show-wrapper .show-member-presale .member-action{display:inline-flex;justify-content:center;align-items:center;min-height:48px;padding:12px 14px;flex:1;border:2px solid #37312d;font:700 15px/1.25 obviously,sans-serif!important;text-decoration:none!important;position:relative;isolation:isolate;overflow:hidden}
