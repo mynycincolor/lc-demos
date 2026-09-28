@@ -36,4 +36,14 @@ listing URL stays unchanged. Each preview includes a Back to demos link.
 `/lincoln-center-presents.html` recreates the series header, video and
 introduction, followed by the membership callout and a short excerpt of the
 original events and promotional content. Its Vimeo embed and poster
-are external media; account and checkout actions still link to the live LC site.
+are external media; account access is simulated as described below; checkout is not connected.
+
+## Access-state demo
+
+All three previews support `?access=unlocked` and signed-out mode. The demo menu
+links to both states. Log in and Join now open clearly labeled simulation dialogs;
+no credentials or payments are collected. Promo entry accepts only the sample code
+`DEMO` and validates locally. Unlocked listing cards link to shows; the local Heidi
+page preserves the state and provides a performance selection preview. Other show
+links open the original LC pages. No actual account, membership, promo eligibility,
+or ticket reservation is created.
