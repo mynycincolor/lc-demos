@@ -179,3 +179,8 @@
 #series-venue-page .presale-performance-picker input{appearance:none;-webkit-appearance:none;flex:0 0 26px;width:26px;height:26px;margin:0;border:1px solid #c3c3c3;border-radius:50%;background:white;box-shadow:inset 0 0 4px #0004;cursor:pointer}
 #series-venue-page .presale-performance-picker input:checked{border-color:var(--lc-presale-blue);background:radial-gradient(circle,var(--lc-presale-blue) 0 6px,white 7px);box-shadow:none}
 #series-venue-page #lincoln-center-presents :is(#cyp-wrapper,#show-wrapper,#landing-page-container) .slide-cta:hover{color:#fff!important}
+/* Keep the date focus ring visible and bring ticket information closer. */
+#series-venue-page #new-sp .vs-show-container #show-date .vs-show-date:has(.presale-performance-picker){overflow:visible;max-height:none;padding-bottom:8px}
+#series-venue-page .presale-performance-picker{margin-bottom:0;padding:0 8px}
+#series-venue-page .presale-performance-picker label:last-child{margin-bottom:0}
+#series-venue-page #new-sp .vs-show-container #show-date .vs-show-date:has(.presale-performance-picker)+.vs-show-icon-and-atc{margin-top:12px}
