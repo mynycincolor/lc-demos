@@ -44,6 +44,7 @@ All three previews support `?access=unlocked` and signed-out mode. The demo menu
 links to both states. Log in and Join now open clearly labeled simulation dialogs;
 no credentials or payments are collected. Promo entry accepts only the sample code
 `DEMO` and validates locally. Unlocked listing cards link to shows; the local Heidi
-page preserves the state and provides a performance selection preview. Other show
+page preserves the state and provides radio-style performance selection. Choosing a date changes its action to
+Book Tickets, which opens a demo checkout notice for that performance. Other show
 links open the original LC pages. No actual account, membership, promo eligibility,
 or ticket reservation is created.

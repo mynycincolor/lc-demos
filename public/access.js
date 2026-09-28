@@ -46,7 +46,7 @@ if(accessUnlocked&&accessBox){
  document.querySelectorAll('.presale-promo').forEach(p=>p.hidden=true);
  const list=document.querySelector('.vs-cyp-group-shows-container');if(list)list.id='presale-shows';
  document.querySelectorAll('[data-member-access]').forEach(button=>{
-  const card=button.closest('.event-with-image-and-description');const link=document.createElement('a');link.className=button.className;link.textContent='Select show';link.setAttribute('data-member-access-unlocked','');
+  const card=button.closest('.event-with-image-and-description');const link=document.createElement('a');link.className=button.className;link.textContent='Learn More';link.setAttribute('data-member-access-unlocked','');
   const source=card.querySelector('.event-title a');link.href=source.getAttribute('href');
   if(link.getAttribute('href').startsWith('/'))link.href=link.getAttribute('href')+'?access=unlocked';else{link.target='_blank';link.rel='noopener noreferrer';}
   button.replaceWith(link);card.querySelector('.member-presale-label').textContent='Presale access unlocked';
@@ -54,13 +54,21 @@ if(accessUnlocked&&accessBox){
  // Keep access when following the local show image/title, too.
  document.querySelectorAll('a[href="/heidi-latsky-dance.html"]').forEach(a=>a.href='/heidi-latsky-dance.html?access=unlocked');
  if(onShow){
-  const chooser=document.createElement('section');chooser.id='presale-performances';chooser.className='presale-performance-picker';chooser.setAttribute('aria-labelledby','performance-picker-title');
-  chooser.innerHTML='<h3 id="performance-picker-title">Select a performance</h3><button type="button">January 9, 2027 · 7:30 pm</button><button type="button">January 10, 2027 · 2:00 pm</button><p class="performance-selection" role="status"></p>';
-  accessBox.after(chooser);
-  chooser.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{
-   chooser.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
-   chooser.querySelector('.performance-selection').textContent='Selected: '+button.textContent+'. Ticket checkout would follow here. This is a demo; no tickets have been reserved.';
-  }));
+  const chooser=document.createElement('fieldset');chooser.id='presale-performances';chooser.className='presale-performance-picker';
+  chooser.innerHTML='<legend>Select a Date</legend><label><input type="radio" name="presale-performance" value="January 9, 2027 at 7:30 pm"><span>Saturday, January 9, 2027 at 7:30 pm</span></label><label><input type="radio" name="presale-performance" value="January 10, 2027 at 2:00 pm"><span>Sunday, January 10, 2027 at 2:00 pm</span></label>';
+  const originalDates=document.querySelector('.vs-show-perf-date-item')?.closest('.scrollbox');
+  if(originalDates)originalDates.replaceWith(chooser);else accessBox.before(chooser);
+  let selectedPerformance='';
+  chooser.addEventListener('change',event=>{
+   selectedPerformance=event.target.value;next.textContent='Book Tickets';next.href='#booking-preview';
+  });
+  const booking=document.createElement('dialog');booking.className='member-access-dialog access-flow-dialog';booking.setAttribute('aria-labelledby','booking-preview-title');
+  booking.innerHTML='<button type="button" class="member-dialog-close" aria-label="Close booking preview">×</button><p class="member-dialog-eyebrow">Demo preview</p><h2 id="booking-preview-title">Book Tickets</h2><p class="booking-performance"></p><p>Ticket checkout would open for this performance. No tickets have been reserved in this demo.</p>';
+  document.body.append(booking);booking.querySelector('button').addEventListener('click',()=>booking.close());
+  next.addEventListener('click',event=>{
+   if(!selectedPerformance)return;
+   event.preventDefault();booking.querySelector('.booking-performance').textContent='Heidi Latsky Dance · '+selectedPerformance;booking.showModal();
+  });
  }
 }
 if(accessUnlocked&&location.hash==='#member-access-confirmation'){
@@ -69,3 +77,6 @@ if(accessUnlocked&&location.hash==='#member-access-confirmation'){
  window.addEventListener('load',revealAccess,{once:true});
  document.fonts.ready.then(revealAccess);
 }
+
+// Use the same left-to-right fill for every visible CTA, including generated actions.
+document.querySelectorAll(".member-action,.access-confirm,.ticket-button,.lnd-description-button,.series-video-toggle,.demo-dialog button,.vs-supporter-link-cont").forEach(button=>button.classList.add("slide-cta"));
