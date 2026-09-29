@@ -1,50 +1,31 @@
-# Membership Presale — local Lincoln Center demo
+# Membership Presale demo
 
-An editable recreation of the public [Choose-What-You-Pay page](https://www.lincolncenter.org/series/lincoln-center-presents/v/choose-what-you-pay), captured September 24, 2026. It is a local starting point for membership presale design, not a live ticketing service.
+An editable Lincoln Center design prototype with two pages and signed-out/unlocked presentation states. Content and dates are a captured design scenario, not live availability.
 
-## Run
+## Run and check
 
-`npm run dev`, then open http://127.0.0.1:4173. No package installation is needed. `npm run check` checks JavaScript syntax. Refresh the browser after edits.
+Run `npm run dev` and open http://127.0.0.1:4173/demos.html. No package installation is required. `npm run check` checks JavaScript syntax.
 
-## Edit
+## Pages and states
 
-- `public/index.html`: the complete page, including the membership introduction, two sale groups, eight event cards (four per release group), and footer.
-- `public/demo.css`: focused overrides over LC's original presentation styles.
-- `public/demo.js`: local menus, ticketing accordion support, and preview-only email dialog.
-- `public/heidi-latsky-dance.html`: show-page presale demo, with the membership callout below the dates and informational pricing label.
-- `public/show.js`: local show-page calendar and share controls.
-- `public/assets/`: cached original images, styles, and fonts.
-- `data/event-inventory.json`: captured event inventory.
-- `data/asset-manifest.json`: public source URLs and asset cache provenance.
+- `/demos.html`: two demo cards with separate links to each state.
+- `/`: Choose-What-You-Pay listing. Locked visitors see the winter presale message, Log In button, and membership text link. Unlocked visitors see the member thank-you message and Select a show anchor to the presale cards. Cards use Learn More in both states. No promo-code option appears here.
+- `/heidi-latsky-dance.html`: show demo. Locked visitors see the member login module and a promo-code link below it. Unlocked visitors see a thank-you module with Book Tickets, selectable performance dates, and no promo-code link.
 
-The baseline preserves current public copy and dates; these are a snapshot, not live availability. Main content, images, and fonts are local. Event, membership, and other destination links open the original sites in another tab. Sign-in, checkout, email subscriptions, analytics, third-party widgets, and the accessibility overlay are not implemented. The ticketing FAQ uses native accessible disclosure behavior. The first row now simulates an active member presale for signed-out visitors. Its four cards have a Member presale label and a full-width Access member presale button, opening an accessible dialog that retains the selected event. The introductory callout and dialog link to LC’s existing membership and login pages. No extra Learn more action is added to presale cards. The active presale state is a design scenario, not a claim about live availability.
+Append `?access=unlocked` to preview unlocked access. The review navigation also switches between states. Local Heidi links preserve unlocked access.
 
-`scripts/create-baseline.py` and `scripts/cache-assets.py` document the initial extraction and require BeautifulSoup plus the source capture at `/tmp/lc-reference.html`. They are one-time provenance utilities, not the editing workflow. Do not rerun them over design changes. Some unused font/image declarations in LC's original CSS could not be cached; the fonts and images used on this page were checked in the browser.
+Login, membership, promo-code and booking controls are presentation placeholders with no destinations or simulated authentication. The Select a show anchor and Learn More navigation remain functional. Other event links open original LC pages. The former Lincoln Center Presents series demo has been removed.
+
+## Editing
+
+`public/index.html` and `public/heidi-latsky-dance.html` contain the pages. `public/access.js` renders the unlocked presentation. `public/demo.css` contains focused overrides over cached LC styles. `public/demo.js` and `public/show.js` provide local menus, disclosures, calendar and share controls. `public/assets/` contains cached source assets.
+
+Production implementation should tie the modules and evergreen membership copy to presale availability: hide evergreen membership copy while the presale module is active, then restore it afterwards. On show pages, remove the module and promo link after presale and restore ordinary booking. This prototype demonstrates active presale only; it does not implement a CMS or time-based visibility rules.
 
 ## Hosting
 
-Import `mynycincolor/member-presale` into Vercel. The checked-in `vercel.json` selects the Other framework preset, checks JavaScript, and publishes `public/`. No environment variables or running Node server are required for hosting. The original Choose-What-You-Pay path is mapped to the demo as well as the root URL. Additional pages can be added under `public/` in the same project.
+The connected GitHub repository is `mynycincolor/member-presale`. Vercel publishes `public/` using `vercel.json`; no environment variables are required. The shareable menu is https://member-presale.vercel.app/demos.html.
 
-The show-page demo is available at `/heidi-latsky-dance.html`, with a hosted alias at `/series/lincoln-center-presents/heidi-latsky-dance-571`. Heidi's title and image on the listing link to this demo. Join and Log in open the existing LC destinations; account authentication is not simulated. The original presale-date and membership-pitch paragraphs are replaced by the new callout. Embedded video and maps still use their original external services. Third-party dynamic supporter widgets are not loaded.
+The original source-path aliases are retained for the CWYP and Heidi pages. Embedded external media and original-site links may require network access. Authentication, payment, ticket reservations, analytics, third-party supporter widgets, and email subscriptions are not connected.
 
-Original Lincoln Center content and assets are retained solely for this requested prototype.
-
-## Shareable demo menu
-
-`/demos.html` links to all three signed-out presale previews. The existing root
-listing URL stays unchanged. Each preview includes a Back to demos link.
-`/lincoln-center-presents.html` recreates the series header, video and
-introduction, followed by the membership callout and a short excerpt of the
-original events and promotional content. Its Vimeo embed and poster
-are external media; account access is simulated as described below; checkout is not connected.
-
-## Access-state demo
-
-All three previews support `?access=unlocked` and signed-out mode. The demo menu
-links to both states. Log in and Join now open clearly labeled simulation dialogs;
-no credentials or payments are collected. Promo entry accepts only the sample code
-`DEMO` and validates locally. Unlocked listing cards link to shows; the local Heidi
-page preserves the state and provides radio-style performance selection. Choosing a date changes its action to
-Book Tickets, which opens a demo checkout notice for that performance. Other show
-links open the original LC pages. No actual account, membership, promo eligibility,
-or ticket reservation is created.
+The scripts under `scripts/` record initial extraction and asset provenance. Do not rerun them over design edits. Original Lincoln Center content and assets are retained solely for this requested prototype.

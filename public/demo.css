@@ -186,3 +186,13 @@
 #series-venue-page .presale-performance-picker{margin-bottom:0;padding:0 8px}
 #series-venue-page .presale-performance-picker label:last-child{margin-bottom:0}
 #series-venue-page #new-sp .vs-show-container #show-date .vs-show-date:has(.presale-performance-picker)+.vs-show-icon-and-atc{margin-top:12px}
+/* Revised member modules: one primary action with membership text beneath it. */
+.hub-pages{grid-template-columns:repeat(2,minmax(0,1fr))}
+#series-venue-page .member-presale-actions{flex-direction:column;align-items:center;gap:12px}
+#series-venue-page .presale-join-link{font:400 16px/1.4 Karla,sans-serif!important;color:var(--lc-presale-blue)!important;text-decoration:underline!important;text-align:center;cursor:pointer}
+#series-venue-page #show-wrapper .show-member-presale .member-action{flex:none;width:100%}
+#series-venue-page #cyp-wrapper .member-presale-actions{flex-shrink:1;min-width:260px;max-width:350px}
+#series-venue-page #cyp-wrapper .member-presale-actions .member-action{flex:none;min-width:150px;cursor:pointer}
+#series-venue-page #show-wrapper .show-member-presale .member-presale-actions{margin-bottom:0}
+@media(max-width:900px){.hub-pages{grid-template-columns:1fr}}
+@media(max-width:600px){#series-venue-page #cyp-wrapper .member-presale-actions{min-width:0;max-width:none;width:100%}#series-venue-page #cyp-wrapper .member-presale-actions .member-action{width:100%}}

@@ -30,21 +30,6 @@ document.querySelectorAll('.email-popup-trigger,.nav-mail,#nav-social-email-desk
 const hero=document.querySelector('.new-header-vs img');
 if(hero?.getAttribute('mobilesrc')){const desktop=hero.src;const mq=matchMedia('(max-width: 600px)');const sync=()=>hero.src=mq.matches?hero.getAttribute('mobilesrc'):desktop;mq.addEventListener('change',sync);sync();}
 
-// The signed-out presale gate retains the selected performance while the dialog is open.
-const memberDialog=document.querySelector('#member-access-dialog');
-document.querySelectorAll('[data-member-access]').forEach(button=>{
- button.addEventListener('click',()=>{
-  const card=button.closest('.event-with-image-and-description');
-  memberDialog.querySelector('#member-selected-event').textContent=card.querySelector('.event-title').textContent.trim();
-  memberDialog.dataset.event=card.dataset.event;
-  memberDialog.showModal();
- });
-});
-memberDialog?.querySelector('.member-dialog-close').addEventListener('click',()=>memberDialog.close());
-memberDialog?.addEventListener('click',event=>{
- const rect=memberDialog.getBoundingClientRect();
- if(event.target===memberDialog&&(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom))memberDialog.close();
-});
 const videoToggle=document.querySelector('.series-video-toggle');
 videoToggle?.addEventListener('click',()=>{
  const paused=videoToggle.getAttribute('aria-pressed')!=='true';
