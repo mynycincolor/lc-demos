@@ -196,3 +196,8 @@
 #series-venue-page #show-wrapper .show-member-presale .member-presale-actions{margin-bottom:0}
 @media(max-width:900px){.hub-pages{grid-template-columns:1fr}}
 @media(max-width:600px){#series-venue-page #cyp-wrapper .member-presale-actions{min-width:0;max-width:none;width:100%}#series-venue-page #cyp-wrapper .member-presale-actions .member-action{width:100%}}
+
+/* Center the listing callout and place its action below the message. */
+#series-venue-page #cyp-wrapper .member-presale-callout{max-width:820px;margin:12px auto 0;flex-direction:column;align-items:center;gap:20px;text-align:center;box-sizing:border-box}
+#series-venue-page #cyp-wrapper .member-presale-callout h2{text-align:center!important}
+#series-venue-page #cyp-wrapper .member-presale-callout .member-presale-actions{align-self:center;width:100%;min-width:0;max-width:350px}
