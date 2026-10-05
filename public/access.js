@@ -6,8 +6,22 @@ const onShow=Boolean(document.querySelector('.show-member-presale'));
 const accessBox=document.querySelector('.member-presale-callout,.show-member-presale');
 const stateNav=document.querySelector('.demo-review-nav');
 if(stateNav){
- const label=stateNav.querySelector('span');if(label)label.textContent=accessUnlocked?'Member presale · Access unlocked':accessIneligible?'Member presale · Signed in, not eligible':'Member presale · Signed-out preview';
- const toggle=document.createElement('a');toggle.href=location.pathname+'?access='+(accessUnlocked?'signed-out':'unlocked')+'#member-access-confirmation';toggle.textContent=accessUnlocked?'Preview signed-out state':'Preview unlocked state';stateNav.append(toggle);
+ stateNav.setAttribute('aria-label','Demo controls');
+ stateNav.innerHTML='<button class="demo-controls-toggle" type="button" aria-expanded="false" aria-controls="demo-controls-panel">Demo controls <span aria-hidden="true">⌄</span></button><div id="demo-controls-panel" hidden><p>Preview state</p><div class="demo-state-links"></div><a class="demo-back-link" href="/demos.html">← Back to demos</a></div>';
+ const toggle=stateNav.querySelector('button');
+ const panel=stateNav.querySelector('#demo-controls-panel');
+ const current=accessUnlocked?'unlocked':accessIneligible?'ineligible':'signed-out';
+ for(const [value,label] of [['signed-out','Signed out'],['ineligible','Signed in, not eligible'],['unlocked','Access unlocked']]){
+  const link=document.createElement('a');
+  const url=new URL(location.href);url.searchParams.set('access',value);url.hash='member-access-confirmation';
+  link.href=url.href;link.textContent=label;
+  if(value===current)link.setAttribute('aria-current','page');
+  stateNav.querySelector('.demo-state-links').append(link);
+ }
+ const close=()=>{panel.hidden=true;toggle.setAttribute('aria-expanded','false');};
+ toggle.addEventListener('click',()=>{panel.hidden=!panel.hidden;toggle.setAttribute('aria-expanded',String(!panel.hidden));});
+ document.addEventListener('click',event=>{if(!stateNav.contains(event.target))close();});
+ document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!panel.hidden){close();toggle.focus();}});
 }
 if(accessBox)accessBox.id='member-access-confirmation';
 if(accessBox&&!accessUnlocked){
