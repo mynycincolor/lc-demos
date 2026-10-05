@@ -205,8 +205,8 @@
 /* Floating reviewer controls, separate from the page navigation. */
 #series-venue-page .demo-review-nav{position:fixed;top:16px;right:16px;z-index:10000;display:block;overflow:visible;padding:0;background:transparent;font:400 14px/1.4 Karla,sans-serif}
 #series-venue-page .demo-controls-toggle{display:flex;align-items:center;gap:12px;border:1px solid #d4d0cc;border-radius:24px;background:#fff;color:#37312d;padding:10px 16px;font:700 14px/1.4 Karla,sans-serif;box-shadow:0 3px 14px #0002;cursor:pointer}
-#series-venue-page .demo-controls-toggle span{display:inline-block;transition:transform .2s}
-#series-venue-page .demo-controls-toggle[aria-expanded="true"] span{transform:rotate(180deg)}
+#series-venue-page .demo-controls-toggle svg{display:block;flex-shrink:0;transition:transform .2s}
+#series-venue-page .demo-controls-toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
 #series-venue-page #demo-controls-panel{position:absolute;right:0;top:calc(100% + 8px);width:240px;max-width:calc(100vw - 32px);padding:12px;background:#fff;border:1px solid #d4d0cc;border-radius:12px;box-shadow:0 6px 24px #0002;box-sizing:border-box}
 #series-venue-page #demo-controls-panel[hidden]{display:none}
 #series-venue-page #demo-controls-panel p{margin:0;padding:4px 10px 8px;font:700 12px/1.4 Karla,sans-serif;color:#68615c;text-transform:uppercase;letter-spacing:.06em}
