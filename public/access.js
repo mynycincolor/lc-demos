@@ -1,13 +1,36 @@
-// Presentation states only. Account, promo-code and checkout destinations are pending.
-const accessUnlocked=new URLSearchParams(location.search).get('access')==='unlocked';
+// Presentation states only. Log In simulates eligible member access; no authentication occurs.
+const accessState=new URLSearchParams(location.search).get('access');
+const accessUnlocked=accessState==='unlocked';
+const accessIneligible=accessState==='ineligible';
 const onShow=Boolean(document.querySelector('.show-member-presale'));
 const accessBox=document.querySelector('.member-presale-callout,.show-member-presale');
 const stateNav=document.querySelector('.demo-review-nav');
 if(stateNav){
- const label=stateNav.querySelector('span');if(label)label.textContent=accessUnlocked?'Member presale · Access unlocked':'Member presale · Signed-out preview';
+ const label=stateNav.querySelector('span');if(label)label.textContent=accessUnlocked?'Member presale · Access unlocked':accessIneligible?'Member presale · Signed in, not eligible':'Member presale · Signed-out preview';
  const toggle=document.createElement('a');toggle.href=location.pathname+'?access='+(accessUnlocked?'signed-out':'unlocked')+'#member-access-confirmation';toggle.textContent=accessUnlocked?'Preview signed-out state':'Preview unlocked state';stateNav.append(toggle);
 }
 if(accessBox)accessBox.id='member-access-confirmation';
+if(accessBox&&!accessUnlocked){
+ const action=accessBox.querySelector('.member-action-primary');
+ if(accessIneligible){
+  accessBox.classList.add('access-ineligible');
+  accessBox.querySelector('h2').textContent='Unlock your member presale access';
+  accessBox.querySelector('p').textContent=onShow
+   ? 'You’re signed in! Become a Lincoln Center Member to unlock early ticket access for this performance.'
+   : 'You’re signed in! Become a Lincoln Center Member to unlock early access to Choose-What-You-Pay tickets.';
+  action.textContent='Join Now';
+  accessBox.querySelector('.presale-join-link')?.remove();
+ }else{
+  action.removeAttribute('data-placeholder');
+  action.addEventListener('click',()=>{
+   const next=new URL(location.href);next.searchParams.set('access','unlocked');next.hash='member-access-confirmation';location.href=next.href;
+  });
+ }
+}
+if(accessIneligible){
+ document.querySelectorAll('a[href="/heidi-latsky-dance.html"]').forEach(a=>a.href='/heidi-latsky-dance.html?access=ineligible');
+}
+
 const presaleList=document.querySelector('.vs-cyp-group-shows-container');
 if(presaleList)presaleList.id='presale-shows';
 if(accessUnlocked&&accessBox){

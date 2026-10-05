@@ -1,6 +1,6 @@
 # Membership Presale demo
 
-An editable Lincoln Center design prototype with two pages and signed-out/unlocked presentation states. Content and dates are a captured design scenario, not live availability.
+An editable Lincoln Center design prototype with two pages and signed-out, signed-in but not eligible, and unlocked presentation states. Content and dates are a captured design scenario, not live availability.
 
 ## Run and check
 
@@ -12,9 +12,11 @@ Run `npm run dev` and open http://127.0.0.1:4173/demos.html. No package installa
 - `/`: Choose-What-You-Pay listing. Locked visitors see the winter presale message, Log In button, and membership text link. Unlocked visitors see the member thank-you message and Select a show anchor to the presale cards. Cards use Learn More in both states. No promo-code option appears here.
 - `/heidi-latsky-dance.html`: show demo. Locked visitors see the member login module and a promo-code link below it. Unlocked visitors see a thank-you module with Book Tickets, selectable performance dates, and no promo-code link.
 
+Append `?access=ineligible` to preview a signed-in visitor without eligible membership, with Join Now and no membership text link. Join Now is an inactive placeholder. The show-page promo link remains available. Local Heidi links preserve this state.
+
 Append `?access=unlocked` to preview unlocked access. The review navigation also switches between states. Local Heidi links preserve unlocked access.
 
-Login, membership, promo-code and booking controls are presentation placeholders with no destinations or simulated authentication. The Select a show anchor and Learn More navigation remain functional. Other event links open original LC pages. The former Lincoln Center Presents series demo has been removed.
+Log In switches the current page to its unlocked presentation without authenticating an account. Membership, promo-code and booking controls remain inactive placeholders. The Select a show anchor and Learn More navigation remain functional. Other event links open original LC pages. The former Lincoln Center Presents series demo has been removed.
 
 ## Editing
 
