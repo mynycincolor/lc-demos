@@ -216,3 +216,7 @@
 #series-venue-page #demo-controls-panel .demo-back-link{border-top:1px solid #e5e2df;border-radius:0;margin-top:8px;padding-top:14px}
 #series-venue-page .demo-review-nav :focus-visible{outline:2px solid var(--lc-presale-blue);outline-offset:3px}
 @media(max-width:600px){#series-venue-page .demo-review-nav{top:10px;right:10px}#series-venue-page .demo-controls-toggle{font-size:12px;padding:8px 12px}}
+
+/* A performance must be chosen before the booking action is available. */
+#series-venue-page #lincoln-center-presents #show-wrapper .show-member-presale .member-action:disabled{background:#dedbd8!important;color:#68615c!important;box-shadow:none!important;cursor:default;transition:none!important}
+#series-venue-page #lincoln-center-presents #show-wrapper .show-member-presale .member-action:disabled::before{display:none!important}

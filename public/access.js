@@ -28,10 +28,10 @@ if(accessBox&&!accessUnlocked){
  const action=accessBox.querySelector('.member-action-primary');
  if(accessIneligible){
   accessBox.classList.add('access-ineligible');
-  accessBox.querySelector('h2').textContent='Unlock your member presale access';
+  accessBox.querySelector('h2').textContent=onShow?'Member Pre-Sale Happening Now!':'Winter Pre-Sale Happening Now!';
   accessBox.querySelector('p').textContent=onShow
-   ? 'You’re signed in! Become a Lincoln Center Member to unlock early ticket access for this performance.'
-   : 'You’re signed in! Become a Lincoln Center Member to unlock early access to Choose-What-You-Pay tickets.';
+   ? 'Become a Lincoln Center Member to access tickets for this performance.'
+   : 'Become a Lincoln Center Member to unlock early access to Choose-What-You-Pay tickets.';
   action.textContent='Join Now';
   accessBox.querySelector('.presale-join-link')?.remove();
  }else{
@@ -61,6 +61,13 @@ if(accessUnlocked&&accessBox){
   const chooser=document.createElement('fieldset');chooser.id='presale-performances';chooser.className='presale-performance-picker';
   chooser.innerHTML='<legend>Select a Date</legend><label><input type="radio" name="presale-performance" value="January 9, 2027 at 7:30 pm"><span>Saturday, January 9, 2027 at 7:30 pm</span></label><label><input type="radio" name="presale-performance" value="January 10, 2027 at 2:00 pm"><span>Sunday, January 10, 2027 at 2:00 pm</span></label>';
   document.querySelector('.vs-show-perf-date-item')?.closest('.scrollbox')?.replaceWith(chooser);
+  const updateBookingAction=()=>{
+   const needsSelection=chooser.querySelectorAll('input[type="radio"]').length>1&&!chooser.querySelector('input:checked');
+   next.disabled=needsSelection;
+   next.textContent=needsSelection?'Select a date':'Book Tickets';
+  };
+  chooser.addEventListener('change',updateBookingAction);
+  updateBookingAction();
  }
 }
 if(location.hash==='#member-access-confirmation'){
