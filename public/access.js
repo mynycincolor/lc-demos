@@ -7,7 +7,7 @@ const accessBox=document.querySelector('.member-presale-callout,.show-member-pre
 const stateNav=document.querySelector('.demo-review-nav');
 if(stateNav){
  stateNav.setAttribute('aria-label','Demo controls');
- stateNav.innerHTML='<button class="demo-controls-toggle" type="button" aria-expanded="false" aria-controls="demo-controls-panel">Demo controls <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5 6 7.5 9 4.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div id="demo-controls-panel" hidden><p>Preview state</p><div class="demo-state-links"></div><a class="demo-back-link" href="/demos.html">← Back to demos</a></div>';
+ stateNav.innerHTML='<button class="demo-controls-toggle" type="button" aria-expanded="false" aria-controls="demo-controls-panel">Demo controls <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5 6 7.5 9 4.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div id="demo-controls-panel" hidden><p>Preview state</p><div class="demo-state-links"></div><a class="demo-back-link" href="/member-presale.html">← Member Presale demos</a></div>';
  const toggle=stateNav.querySelector('button');
  const panel=stateNav.querySelector('#demo-controls-panel');
  const current=accessUnlocked?'unlocked':accessIneligible?'ineligible':'signed-out';

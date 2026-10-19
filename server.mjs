@@ -6,7 +6,7 @@ const types={'.html':'text/html','.css':'text/css','.js':'text/javascript','.svg
 http.createServer(async(req,res)=>{
   const url=new URL(req.url,'http://localhost');
   const pathname=decodeURIComponent(url.pathname);
-  const file=resolve(root,'.'+(pathname==='/'||pathname==='/series/lincoln-center-presents/v/choose-what-you-pay'?'/index.html':pathname));
+  const file=resolve(root,'.'+(pathname==='/'?'/index.html':pathname==='/series/lincoln-center-presents/v/choose-what-you-pay'?'/choose-what-you-pay.html':pathname==='/series/lincoln-center-presents/heidi-latsky-dance-571'?'/heidi-latsky-dance.html':pathname));
   if(!file.startsWith(root+'/')){res.writeHead(403);return res.end();}
   try {const body=await readFile(file);res.writeHead(200,{'Content-Type':types[extname(file)]||'application/octet-stream','Cache-Control':'no-cache'});res.end(body);}
   catch{res.writeHead(404);res.end('Not found');}
